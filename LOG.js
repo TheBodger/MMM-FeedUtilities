@@ -35,7 +35,7 @@ exports.createLogger = function (filename,loggerid) {
 			//
 			// - Write all logs to filename
 			//
-			new transports.File({ filename: filename, options: { flags: 'w' } })
+			new transports.File({ filename: "modules/MMM-FeedUtilities/logs/"+filename, options: { flags: 'w' } })
 		]
 	});
 
