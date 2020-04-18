@@ -19,7 +19,8 @@
   ],
   "dependencies": {
     "axios": "latest",
-    "winston": "latest"
+    "winston": "latest",
+    "htmlparser2": "latest"
   },
   "license": "MIT",
   "bugs": {
