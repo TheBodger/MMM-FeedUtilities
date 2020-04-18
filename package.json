@@ -1,7 +1,7 @@
 {
-  "name": "MMM-FeedProvider-RSS",
+  "name": "MMM-FeedUtilities",
   "version": "1.0.0",
-  "description": "Magic Mirror Module for pulling RSS and ATom feeds, converting to RSS 2.0 format and passing to a main module",
+  "description": "A common library of utility scripts used by other MMM-Feedxxxxx modules",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheBodger/MMM-FeedProvider-RSS"
@@ -12,10 +12,10 @@
   "keywords": [
     "magic mirror",
     "smart mirror",
-    "RSS Feeds",
-    "Atom Feeds",
-    "module",
-    "provider"
+    "common library",
+    "Logger",
+    "RSS Structures",
+    "Utilities"
   ],
   "dependencies": {
     "axios": "latest",
@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheBodger/MMM-FeedProvider-RSS/issues"
+    "url": "https://github.com/TheBodger/MMM-FeedUtilities/issues"
   },
-  "homepage": "https://github.com/TheBodger/MMM-FeedProvider-RSS#readme"
+  "homepage": "https://github.com/TheBodger/MMM-FeedUtilitiesS#readme"
 }
