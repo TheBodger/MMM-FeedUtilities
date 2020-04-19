@@ -2,13 +2,14 @@
 const axios = require("axios");
 var LOG = require('./LOG');
 
-exports.RSSitem = function (id, title, description, pubdate, age, imageURL, categories) {
+exports.RSSitem = function (id, title, description, pubdate, age, imageURL, source, categories) {
 	this.id = id;				// use title as probably uniue and then we hashcode it
 	this.title = title;
 	this.description = description;
 	this.pubdate = pubdate;
 	this.age = age; //in microseconds
 	this.imageURL = imageURL;
+	this.source = source;
 	this.getage = function (now, then) {
 		return (now.getTime() - then.getTime());
 	};
@@ -92,6 +93,8 @@ exports.RSSsource = function () {
 	this.url = '';
 };
 
+
+// an ayync function that allows us to use the await option on the call to get the image; Gerneric handling for errors which could include timeouts
 //	async function executeAsyncTask() {
 //	const valueA = await functionA();
 //	const valueB = await functionB(valueA);
@@ -103,7 +106,7 @@ exports.checkfortrackingpixel = async function (url, moduleinstance) {
 	var self = this;
 
 	if (self.logger == null) {
-		self.logger = LOG.createLogger("logs/rss.log", "rss"); // will add logging by name if needed
+		self.logger = LOG.createLogger("rss.log", "rss"); // will add logging by name if needed
 	}
 
 	self.logger.info(`check for pixel ${url}`);
@@ -122,6 +125,7 @@ exports.checkfortrackingpixel = async function (url, moduleinstance) {
 
 	} catch (error) {
 		console.error(`Could not get the URL: ${url} because we got an error: ${error}`);
+		return false;
 	}
 	self.logger.info(`dropped out the bottom `);
 	return false;
