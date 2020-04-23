@@ -3,6 +3,7 @@
 
 #dont forget the chmod +x run this in bash land
 
+#go back to modules
 cd ../
 
 #
@@ -18,22 +19,18 @@ git clone https://github.com/TheBodger/MMM-FeedProvider-Instagram
 rm -r MMM-FeedProvider-Reddit
 git clone https://github.com/TheBodger/MMM-FeedProvider-Reddit
 
-cd MMM-FeedProvider-RSS/
-npm install
+#go back to mm root
+
 cd ../
 
-cd MMM-FeedProvider-Twitter/
-npm install
-cd ../
+#install all the dependencies here so we dont create humongous directories of copies of npm modules
 
-cd MMM-FeedProvider-Instagram/
-npm install
-cd ../
-
-cd MMM-FeedProvider-Reddit/
-npm install
-cd ../
-
-cd MMM-FeedDisplay/
-npm install
-cd ../
+npm install axios
+npm install winston
+npm install moment
+npm install feedparser
+npm install request
+npm install fs
+npm install twitter
+npm install htmlparser2
+npm install isprofanity
