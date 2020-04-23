@@ -6,7 +6,7 @@
 cd ../
 
 #
-rm -r https://github.com/TheBodger/MMM-FeedDisplay
+rm -r MMM-FeedDisplay
 git clone https://github.com/TheBodger/MMM-FeedDisplay
 
 rm -r MMM-FeedProvider-RSS
