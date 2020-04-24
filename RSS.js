@@ -13,6 +13,9 @@ exports.RSSitem = function (id, title, description, pubdate, age, imageURL, sour
 	this.getage = function (now, then) {
 		return (now.getTime() - then.getTime());
 	};
+	this.isImage = function (imageURL) {
+		return checkURL(imageURL);
+	};
 	this.getimagefromhtml = function (content) {
 
 		//give precedence to images in address links
