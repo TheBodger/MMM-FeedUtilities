@@ -7,16 +7,16 @@
 cd ../
 
 #
-rm -r MMM-FeedDisplay
+#rm -r MMM-FeedDisplay
 git clone https://github.com/TheBodger/MMM-FeedDisplay
 
-rm -r MMM-FeedProvider-RSS
+#rm -r MMM-FeedProvider-RSS
 git clone https://github.com/TheBodger/MMM-FeedProvider-RSS
-rm -r MMM-FeedProvider-Twitter
+#rm -r MMM-FeedProvider-Twitter
 git clone https://github.com/TheBodger/MMM-FeedProvider-Twitter
-rm -r MMM-FeedProvider-Instagram
+#rm -r MMM-FeedProvider-Instagram
 git clone https://github.com/TheBodger/MMM-FeedProvider-Instagram
-rm -r MMM-FeedProvider-Reddit
+#rm -r MMM-FeedProvider-Reddit
 git clone https://github.com/TheBodger/MMM-FeedProvider-Reddit
 
 #go back to mm root
