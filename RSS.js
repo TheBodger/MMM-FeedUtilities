@@ -94,6 +94,7 @@ exports.RSSsource = function () {
 	this.title = '';
 	this.sourcetitle = '';
 	this.url = '';
+	this.sourceiconclass = null;  //use a suitabel fontawesome class name
 };
 
 
