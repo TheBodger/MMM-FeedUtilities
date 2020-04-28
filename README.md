@@ -37,26 +37,6 @@ if (this.debug) { // log output to the log file, currently only info has been te
 }
 ```
 
-`LOG.js` - is used to log to a file from any node_helper or other server side code. It will not log to files from client side modules. 
-
-By default, the log files are written to the directory: `modules/MMM-FeedUtilities/logs/`
-The Logger uses winston to format the log information, and the program can be changed by the user as required to create other output formats
-
-example:
-
-```
-var LOG = require('../MMM-FeedUtilities/LOG');  // add LOG to module
-this.logger = {}
-if (this.logger[a_log_instance] == null) { //create a log instance of not already created
-	this.logger[a_log_instance] = LOG.createLogger("alogfile_" + a_log_instance + ".log", a_log_instance);
-};
-
-if (this.debug) { // log output to the log file, currently only info has been tested
-	this.logger[a_log_instance].info(this.name + " NODE HELPER Received notification: " + notification);
-	this.logger[a_log_instance].info(JSON.stringify(some_json_object));
-}
-```
-
 ### Variables/methods 
 
 | Option                  | Details
