@@ -1,4 +1,15 @@
-﻿const htmlparser2 = require("htmlparser2");
+﻿/* utility Modules, FeedUtilities */
+
+/* Magic Mirror
+ * Module: FeedUtilities
+ *
+ * By Neil Scott
+ * Inspired by many in the MMM ecosystem
+ * MIT Licensed.
+ */
+
+
+const htmlparser2 = require("htmlparser2");
 const axios = require("axios");
 var LOG = require('./LOG');
 

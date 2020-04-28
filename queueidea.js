@@ -1,3 +1,13 @@
+/* utility Modules, FeedUtilities */
+
+/* Magic Mirror
+ * Module: FeedUtilities
+ *
+ * By Neil Scott
+ * Inspired by many in the MMM ecosystem
+ * MIT Licensed.
+ */
+
 //add date and debug
 
 var LOG = require('./LOG');
