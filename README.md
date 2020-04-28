@@ -46,15 +46,15 @@ if (this.debug) { // log output to the log file, currently only info has been te
 | `loggerid`              | *Required* - A unique ID for wach logger created.
 | `info`				  | *Method* - logs the information to the file
 
-## MagicMirror² Configuration
+#### MagicMirror² Configuration
 
 no configuration is required
 
-`queueidea.js` - is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchrinos solution in a asynchronous environement. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
+##`queueidea.js` - #is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchrinos solution in a asynchronous environement. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
 
 For usage, variables etc, look at any of the MMM-FeedProvider-xxx modules
 
-## MagicMirror² Configuration
+### MagicMirror² Configuration
 
 No configuration is required for this module, but it will use settings from the config for managing the queues See the MMM-FeedProvider-xx modules for examples
 
