@@ -15,7 +15,7 @@ The following node modules are required:
 To install the module, use your terminal to:
 1. Navigate to your MagicMirror's modules folder. If you are using the default installation directory, use the command:<br />`cd ~/MagicMirror/modules`
 2. Clone the module:<br />`git clone https://github.com/TheBodger/MMM-FeedUtilities`
-3. To install all the other MMM-Feed.... modules, <BR />`cd MMM-FeedUtilities`<BR />(if on a unix device) `sudo chmod +x install.sh`<BR />`./install.sh`
+3. To install all the other MMM-Feed.... modules, and their nodejs dependencies into the root of magicmirror (reduces disk usage) <BR />`cd MMM-FeedUtilities`<BR />(if on a unix device) `sudo chmod +x install.sh`<BR />`./install.sh`
 
 ## Using the utilities
 
