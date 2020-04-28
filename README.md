@@ -41,17 +41,20 @@ if (this.debug) { // log output to the log file, currently only info has been te
 
 | Option                  | Details
 |------------------------ |--------------
-
 | `createLogger`          | *Mthod* - The name of the logfile to create on disk
 | `filename`              | *Required* - The name of the logfile to create on disk
 | `loggerid`              | *Required* - A unique ID for wach logger created.
 | `info`				  | *Method* - logs the information to the file
 
+## MagicMirror² Configuration
+
+no configuration is required
+
 `queueidea.js` - is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchrinos solution in a asynchronous environement. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
 
 For usage, variables etc, look at any of the MMM-FeedProvider-xxx modules
 
-### MagicMirror² Configuration
+## MagicMirror² Configuration
 
 No configuration is required for this module, but it will use settings from the config for managing the queues See the MMM-FeedProvider-xx modules for examples
 
@@ -60,3 +63,16 @@ No configuration is required for this module, but it will use settings from the 
 For examples of usage, see any of the MMM-FeedProvider-xxx modules
 
 `utilities.js` - contains common routines that are used across the MMM-Feedxxxx modules.
+
+### Configuration Options
+
+| Option                  | Details
+|------------------------ |--------------
+| `listID`                | *Required* - List ID printed from authenticate.js (see installation)
+| `maxResults`            | *Optional* - Max number of list items to retrieve. <br><br> **Possible values:** `0` - `100` <br> **Default value:** `10`
+| `showCompleted`         | *Optional* - Show completed task items <br><br> **Possible values:** `true`  `false` <br> **Default value:** `false`
+| `dateFormat`            | *Optional* - Format to use for due date <br><br> **Possible values:** See [Moment.js formats](http://momentjs.com/docs/#/parsing/string-format/) <br> **Default value:** `MMM Do` (e.g. Jan 18th)
+| `updateInterval`        | *Optional* - Interval at which content updates (Milliseconds) <br><br> **Possible values:** `2000` - `86400000` (Tasks API has default maximum of 50,000 calls per day.) <br> **Default value:** `10000` (10 seconds)
+| `animationSpeed`        | Speed of the update animation. (Milliseconds) <br><br> **Possible values:** `0` - `5000` <br> **Default value:** `2000` (2 seconds)
+| `tableClass`            | Name of the classes issued from `main.css`. <br><br> **Possible values:** xsmall, small, medium, large, xlarge. <br> **Default value:** _small_
+
