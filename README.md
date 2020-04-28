@@ -27,7 +27,7 @@ example:
 
 var LOG = require('../MMM-FeedUtilities/LOG');  // add LOG to module
 this.logger = {}
-if (this.logger[a_log_instance] == null) { //create a log instance of not already created
+if (this.logger[a_log_instance] == null) { //create a log instance if not already created
 	this.logger[a_log_instance] = LOG.createLogger("alogfile_" + a_log_instance + ".log", a_log_instance);
 };
 
@@ -67,7 +67,16 @@ if (this.debug) { // log output to the log file, currently only info has been te
 | `loggerid`              | *Required* - A unique ID for wach logger created.
 | `info`				  | *Method* - logs the information to the file
 
+`queueidea.js` - is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchrinos solution in a asynchronous environement. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
+
+For usage, variables etc, look at any of the MMM-FeedProvider-xxx modules
+
 ### MagicMirror² Configuration
 
-No configuration is required for this module
+No configuration is required for this module, but it will use settings from the config for managing the queues See the MMM-FeedProvider-xx modules for examples
 
+`RSS.js` - contains the standard format structure for the items and item sources used in all the MMM-FeedProvider-xxx modules. These ensure that the correct data format is provided to the MMM-FeedDisplay module
+
+For examples of usage, see any of the MMM-FeedProvider-xxx modules
+
+`utilities.js` - contains common routines that are used across the MMM-Feedxxxx modules.
