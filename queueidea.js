@@ -57,7 +57,7 @@ exports.queue = function (queuename,debug) {
 
         this.queue_started = true;
 
-         //run an initial item before we start waiting for each item beleo (may reduce interval to 0!!)
+         //run an initial item before we start waiting for each item below (may reduce interval to 0!!)
 
         self.queue_busy = true;
         self.currentmeta = self.meta.shift()

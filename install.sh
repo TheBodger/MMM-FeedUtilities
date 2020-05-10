@@ -27,10 +27,8 @@ cd ../
 
 npm install axios
 npm install winston
-npm install moment
 npm install feedparser
 npm install request
-npm install fs
 npm install twitter
 npm install htmlparser2
 npm install isprofanity
