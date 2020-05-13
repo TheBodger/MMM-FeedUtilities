@@ -1,14 +1,18 @@
 # MMM-FeedUtilities Module
 
-This module provides the location for a number of common helper modules, structures and scripts. 
+This module contains a number of common helper modules, structures and scripts which are used by most of the MMM Chart and MMM Feed modules 
 
 ### Dependencies
 The following node modules are required:
 
 ```
-    axios 
-    winston
-    htmlparser2
+npm install axios
+npm install winston
+npm install feedparser
+npm install request
+npm install twitter
+npm install htmlparser2
+npm install isprofanity
 ```
 
 ### Installation
@@ -37,8 +41,6 @@ if (this.debug) { // log output to the log file, currently only info has been te
 }
 ```
 
-#### Variables/methods 
-
 | Option                  | Details
 |------------------------ |--------------
 | `createLogger`          | *Method* - The name of the logfile to create on disk
@@ -46,20 +48,17 @@ if (this.debug) { // log output to the log file, currently only info has been te
 | `loggerid`              | *Required* - A unique ID for wach logger created.
 | `info`				  | *Method* - logs the information to the file
 
-#### MagicMirror² Configuration
-
-no configuration is required
 
 `queueidea.js` - is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchronous solution in a asynchronous environment. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
 
 For usage, variables etc, look at any of the MMM-FeedProvider-xxx modules
-
-#### MagicMirror² Configuration
-
-No configuration is required for this module, but it will use settings from the config for managing the queues See the MMM-FeedProvider-xx modules for examples
 
 `RSS.js` - contains the standard format structure for the items and item sources used in all the MMM-FeedProvider-xxx modules. These ensure that the correct data format is provided to the MMM-FeedDisplay module
 
 For examples of usage, see any of the MMM-FeedProvider-xxx modules
 
 `utilities.js` - contains common routines that are used across the MMM-Feedxxxx modules.
+
+#### MagicMirror² Configuration
+
+no configuration is required
