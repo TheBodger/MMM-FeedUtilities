@@ -50,7 +50,7 @@ if (this.debug) { // log output to the log file, currently only info has been te
 
 no configuration is required
 
-`queueidea.js` - is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchrinos solution in a asynchronous environement. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
+`queueidea.js` - is used to create a queue onto which work in the form of functions can be added. The goal is to provide a pseudo synchronous solution in a asynchronous environment. The queue will run each item in turn, waiting for notification that the item has been fully processed before starting the next item. 
 
 For usage, variables etc, look at any of the MMM-FeedProvider-xxx modules
 
