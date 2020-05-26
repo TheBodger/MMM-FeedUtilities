@@ -34,3 +34,4 @@ npm install request
 npm install twitter
 npm install htmlparser2
 npm install isprofanity
+npm install xmlhttprequest

@@ -9,6 +9,8 @@
  */
 
 var moment = require('moment');
+var Filter = require('bad-words');
+var	filter = new Filter();
 
 exports.cleanString = function (theString) {
 	var self = this;
@@ -21,7 +23,7 @@ exports.cleanString = function (theString) {
 	cTextClean = cTextClean.replace(/[^\x00-\x7F]/g, '');
 	cTextClean = cTextClean.replace(/\n/g, ' ');
 	cTextClean = cTextClean.replace(/\s+/g, ' ');
-	cTextClean = cTextClean.replace(/[^A-Za-z0-9_]/g, ' '); //remove all the delimiters
+	//cTextClean = cTextClean.replace(/[^A-Za-z0-9_]/g, ' '); //remove all the delimiters
 	cTextClean = cTextClean.trim();
 	if (cTextClean.endsWith(':'))
 		cTextClean = cTextClean.substr(0, cTextClean.length - 1);
@@ -30,6 +32,8 @@ exports.cleanString = function (theString) {
 	//	b = t ? 'contains' : 'does not contain';
 	//	self.logger[self.currentmoduleinstance].info("In cleanString : " + '"' + cTextClean + '" ' + b + ' profanity ' + JSON.stringify(words));
 	//}, 'node_modules/isprofanity/data/profanity.csv', 'node_modules/isprofanity/data/exceptions.csv', 0.8);
+
+	//cTextClean = filter.clean(cTextClean,'*'); //Don't be an ******
 
 	return cTextClean;
 },
