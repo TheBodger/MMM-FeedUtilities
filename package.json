@@ -20,7 +20,8 @@
   "dependencies": {
     "axios": "latest",
     "winston": "latest",
-    "htmlparser2": "latest"
+    "htmlparser2": "latest",
+    "leo-profanity": "latest"
   },
   "license": "MIT",
   "bugs": {

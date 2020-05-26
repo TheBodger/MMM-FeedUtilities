@@ -25,7 +25,7 @@ git clone https://github.com/TheBodger/MMM-FeedProvider-Reddit
 
 cd ../
 
-#install all the dependencies here so we dont create humongous directories of copies of npm modules
+#install all the dependencies here so we don't create humongous directories of copies of npm modules
 
 npm install axios
 npm install winston
@@ -35,3 +35,4 @@ npm install twitter
 npm install htmlparser2
 npm install isprofanity
 npm install xmlhttprequest
+npm install leo-profanity

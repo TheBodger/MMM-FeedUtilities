@@ -9,8 +9,35 @@
  */
 
 var moment = require('moment');
-var Filter = require('bad-words');
-var	filter = new Filter();
+var filter = require('leo-profanity');
+
+var words = filter.list();
+var wordstoadd = [];
+
+for (var i = 0, len = words.length; i < len; i++) {
+
+	wordstoadd.push(words[i] + "er");
+	wordstoadd.push(words[i] + "ers");
+
+}
+
+filter.add(wordstoadd);
+
+//var filter = new Filter();
+
+exports.profanitycleaner = function (theString) {
+
+	var self = this;
+
+	if (theString == null) { return theString };
+
+	return filter.clean(theString, '*'); //Don't be an ******
+
+	//isprofanity(cTextClean, function (t,words) {
+	//	b = t ? 'contains' : 'does not contain';
+	//	self.logger[self.currentmoduleinstance].info("In cleanString : " + '"' + cTextClean + '" ' + b + ' profanity ' + JSON.stringify(words));
+	//}, 'node_modules/isprofanity/data/profanity.csv', 'node_modules/isprofanity/data/exceptions.csv', 0.8);
+},
 
 exports.cleanString = function (theString) {
 	var self = this;
@@ -23,17 +50,10 @@ exports.cleanString = function (theString) {
 	cTextClean = cTextClean.replace(/[^\x00-\x7F]/g, '');
 	cTextClean = cTextClean.replace(/\n/g, ' ');
 	cTextClean = cTextClean.replace(/\s+/g, ' ');
-	//cTextClean = cTextClean.replace(/[^A-Za-z0-9_]/g, ' '); //remove all the delimiters
+	//cTextClean = cTextClean.replace(/[^A-Za-z0-9_]/g, ' '); //remove all the delimiters // leave this as it kills ! ? ' etc
 	cTextClean = cTextClean.trim();
 	if (cTextClean.endsWith(':'))
 		cTextClean = cTextClean.substr(0, cTextClean.length - 1);
-
-	//isprofanity(cTextClean, function (t,words) {
-	//	b = t ? 'contains' : 'does not contain';
-	//	self.logger[self.currentmoduleinstance].info("In cleanString : " + '"' + cTextClean + '" ' + b + ' profanity ' + JSON.stringify(words));
-	//}, 'node_modules/isprofanity/data/profanity.csv', 'node_modules/isprofanity/data/exceptions.csv', 0.8);
-
-	//cTextClean = filter.clean(cTextClean,'*'); //Don't be an ******
 
 	return cTextClean;
 },
