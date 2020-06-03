@@ -46,10 +46,11 @@ exports.cleanString = function (theString) {
 	var cTextClean = theString;
 	cTextClean = cTextClean.replace(/<head>[\s\S]*?<\/head>/ig, ""); //loose the head section
 	cTextClean = cTextClean.replace(/(<([^>]+)>)/ig, ""); // loose all the tags and contents
-	cTextClean = cTextClean.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '');
-	cTextClean = cTextClean.replace(/[^\x00-\x7F]/g, '');
-	cTextClean = cTextClean.replace(/\n/g, ' ');
-	cTextClean = cTextClean.replace(/\s+/g, ' ');
+	cTextClean = cTextClean.replace(/(?:https?|ftp):\/\/[\n\S]+/g, ''); //urls
+	cTextClean = cTextClean.replace(/[^\x00-\x7F]/g, ''); //dodgy hex characters
+	cTextClean = cTextClean.replace(/\n/g, ' '); //newlines
+	cTextClean = cTextClean.replace(/\s+/g, ' '); // whatever this is
+	cTextClean = cTextClean.replace(/:/g, ' '); // a couple of annoying characters that upset word clouds
 	//cTextClean = cTextClean.replace(/[^A-Za-z0-9_]/g, ' '); //remove all the delimiters // leave this as it kills ! ? ' etc
 	cTextClean = cTextClean.trim();
 	if (cTextClean.endsWith(':'))
