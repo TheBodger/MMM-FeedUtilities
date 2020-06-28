@@ -61,6 +61,10 @@ exports.cleanString = function (theString) {
 
 exports.calcTimestamp = function (age) {
 
+	//ignore nulls
+
+	if (age == null) {return null;}
+
 	//calculate the actual timestamp to use for filtering feeds, 
 	//options are timestamp format, today for midnight + 0.0001 seconds today, or age in minutes
 	//determine the format of the data in age
@@ -95,13 +99,13 @@ exports.calcTimestamp = function (age) {
 
 },
 	
-exports.showElapsed = function() {
+exports.showElapsed = function (startTime) {
 		endTime = new Date();
 		var timeDiff = endTime - startTime; //in ms
 		// strip the ms
 		timeDiff /= 1000;
 		// get seconds 
-		var seconds = Math.round(timeDiff);
+		var seconds = (timeDiff);
 		return (" " + seconds + " seconds");
 };
 
