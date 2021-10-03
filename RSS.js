@@ -27,6 +27,9 @@ exports.RSSitem = function (id, title, description, pubdate, age, imageURL, sour
 	this.isImage = function (imageURL) {
 		return checkURL(imageURL);
 	};
+	this.isIMGUR = function (imageURL) {
+		return checkIMGUR(imageURL);
+	};
 	this.getimagefromhtml = function (content) {
 
 		//give precedence to images in address links
@@ -91,6 +94,13 @@ var getid = function (idasadate) {// we use the published or current date to cre
 
 var checkURL = function (imgurl) {
 	const regex = /\.(jpeg|jpg|gif|png|bmp|tiff)$/;
+	//console.log(imgurl);
+	//console.log(imgurl.match(regex));
+	return (imgurl.match(regex) != null);
+};
+
+var checkIMGUR = function (imgurl) {
+	const regex = /\.(gifv)$/;
 	//console.log(imgurl);
 	//console.log(imgurl.match(regex));
 	return (imgurl.match(regex) != null);
