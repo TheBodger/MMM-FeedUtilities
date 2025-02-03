@@ -15,7 +15,7 @@ git clone https://github.com/TheBodger/MMM-FeedDisplay
 #rm -r MMM-FeedProvider-RSS
 git clone https://github.com/TheBodger/MMM-FeedProvider-RSS
 #rm -r MMM-FeedProvider-Twitter
-git clone https://github.com/TheBodger/MMM-FeedProvider-Twitter
+#git clone https://github.com/TheBodger/MMM-FeedProvider-Twitter #no longer supported
 #rm -r MMM-FeedProvider-Instagram
 git clone https://github.com/TheBodger/MMM-FeedProvider-Instagram
 #rm -r MMM-FeedProvider-Reddit
