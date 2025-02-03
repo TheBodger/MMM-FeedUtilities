@@ -21,6 +21,14 @@ To install the module, use your terminal to:
 2. Clone the module:<br />`git clone https://github.com/TheBodger/MMM-FeedUtilities`
 3. To install all the other MMM-Feed.... modules, and their nodejs dependencies into the root of magicmirror (reduces disk usage) <BR />`cd MMM-FeedUtilities`<BR />(if on a unix device) `sudo chmod +x install.sh`<BR />`./install.sh`
 
+### Update
+
+to update this module and its dependecies, including the fix for docker compatibility, use your terminal to:
+1. Navigate to the MagicMirror folder where it was installed. If you are using the default installation directory, use the command:<br />`cd ~/MagicMirror/modules/MMM-FeedUtilities`
+2. Update the module:<br />`git pull`
+3. To update the nodejs dependencies (if on a unix device) `sudo chmod +x install.sh`<BR />`./install.sh`
+4. This may report a number of fatal messages indicating directories are not empty, ignore these
+
 ### Using the utilities
 
 `LOG.js` - is used to log to a file from any node_helper or other server side code. It will not log to files from client side modules. 
@@ -59,6 +67,6 @@ For examples of usage, see any of the MMM-FeedProvider-xxx modules
 
 `utilities.js` - contains common routines that are used across the MMM-Feedxxxx modules.
 
-#### MagicMirror² Configuration
+#### MagicMirrorÂ² Configuration
 
 no configuration is required
